@@ -43,11 +43,11 @@ public class manager : MonoBehaviour
         vetGameObj[15].transform.position = new Vector3(2.5f, 0.866f, 0.289f); //Magenta
         vetGameObj[16].transform.position = new Vector3(2f, 1.732f, 0.578f); //Magenta
         vetGameObj[17].transform.position = new Vector3(1.656f, 0.338f, 0.374f); //Amarelo
-        vetGameObj[18].transform.position = new Vector3(0f, 0f, 0f); //Amarelo
-        vetGameObj[19].transform.position = new Vector3(0f, 0f, 0f); //Amarelo
-        vetGameObj[20].transform.position = new Vector3(0f, 0f, 0f); //Vermelho
-        vetGameObj[21].transform.position = new Vector3(0f, 0f, 0f); //Vermelho
-        vetGameObj[22].transform.position = new Vector3(0f, 0f, 0f); //Vermelho
+        vetGameObj[18].transform.position = new Vector3(1.154f, 0.33f, 1.23f); //Amarelo
+        vetGameObj[19].transform.position = new Vector3(1.146f, 1.209f, 0.654f); //Amarelo
+        vetGameObj[20].transform.position = new Vector3(1.507945f, 0.8542254f, 2.008367f); //Vermelho
+        vetGameObj[21].transform.position = new Vector3(0f, 0f, -11f); //Vermelho
+        vetGameObj[22].transform.position = new Vector3(0f, 0f, -14f); //Vermelho
 
         //ROTAÇOES
         vetGameObj[11].transform.rotation = Quaternion.Euler(0f, 180f, 0f); //Baixo
@@ -56,12 +56,12 @@ public class manager : MonoBehaviour
         vetGameObj[14].transform.rotation = Quaternion.Euler(37f, 0f, 180f); //Magenta
         vetGameObj[15].transform.rotation = Quaternion.Euler(37f, 0f, 180f); //Magenta
         vetGameObj[16].transform.rotation = Quaternion.Euler(37f, 0f, 180f); //Magenta
-        vetGameObj[17].transform.rotation = Quaternion.Euler(197.823f, -54.92499f, -33.62201f); //Amarelo
-        vetGameObj[18].transform.rotation = Quaternion.Euler(0f, 0f, 0f); //Amarelo
-        vetGameObj[19].transform.rotation = Quaternion.Euler(0f, 0f, 0f); //Amarelo
-        vetGameObj[20].transform.rotation = Quaternion.Euler(0f, 0f, 0f); //Vermelho
-        vetGameObj[21].transform.rotation = Quaternion.Euler(0f, 0f, 0f); //Vermelho
-        vetGameObj[22].transform.rotation = Quaternion.Euler(0f, 0f, 0f); //Vermelho
+        vetGameObj[17].transform.rotation = Quaternion.Euler(-162.177f, -54.92499f, -33.62201f); //Amarelo
+        vetGameObj[18].transform.rotation = Quaternion.Euler(-162.177f, -54.92499f, -33.62201f); //Amarelo
+        vetGameObj[19].transform.rotation = Quaternion.Euler(-162.177f, -54.92499f, -33.62201f); //Amarelo
+        vetGameObj[20].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f); //Vermelho
+        vetGameObj[21].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f); //Vermelho
+        vetGameObj[22].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f); //Vermelho
 
 
 
