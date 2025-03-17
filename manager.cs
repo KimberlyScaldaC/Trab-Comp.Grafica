@@ -59,9 +59,9 @@ public class manager : MonoBehaviour
         vetGameObj[14].transform.rotation = Quaternion.Euler(37f, 0f, 180f); //Magenta
         vetGameObj[15].transform.rotation = Quaternion.Euler(37f, 0f, 180f); //Magenta
         vetGameObj[16].transform.rotation = Quaternion.Euler(37f, 0f, 180f); //Magenta
-        vetGameObj[17].transform.rotation = Quaternion.Euler(-162.177f, -54.92499f, -33.62201f); //Amarelo
-        vetGameObj[18].transform.rotation = Quaternion.Euler(-162.177f, -54.92499f, -33.62201f); //Amarelo
-        vetGameObj[19].transform.rotation = Quaternion.Euler(-162.177f, -54.92499f, -33.62201f); //Amarelo
+        vetGameObj[17].transform.rotation = Quaternion.Euler(-162.24f, -54.88599f, -33.29901f); //Amarelo
+        vetGameObj[18].transform.rotation = Quaternion.Euler(-162.24f, -54.88599f, -33.29901f); //Amarelo
+        vetGameObj[19].transform.rotation = Quaternion.Euler(-162.24f, -54.88599f, -33.29901f); //Amarelo
         vetGameObj[20].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f); //Vermelho
         vetGameObj[21].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f); //Vermelho
         vetGameObj[22].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f); //Vermelho
