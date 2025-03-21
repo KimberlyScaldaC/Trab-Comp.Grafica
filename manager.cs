@@ -9,6 +9,9 @@ public class manager : MonoBehaviour
     public GameObject[] vetGameObj = new GameObject[24];
     GameObject pai;
     Vector3 m_Center;
+    double CP1x, CP1y, CP1z;
+    double CP2x, CP2y, CP2z;
+    double CP3x, CP3y, CP3z;
     // Use this for initialization
     void Start()
     {
@@ -77,6 +80,39 @@ public class manager : MonoBehaviour
         pai.transform.position = new Vector3(0, 1, 0); //pivo
         vetGameObj[3].transform.parent = pai.transform;
         //vetGameObj[3].transform.bounds
+
+        //centro do tetraedro DE PLANO 1
+        CP1x = (0 + 3 + 1.5)/3;
+        CP1y = (0 + 0 + 0)/3;
+        CP1z = (0 + 0 + 2.595)/3;
+
+        //centro do tetraedro DE PLANO 2
+        CP2x = (0.5 + 2.5 + 1.5) / 3;
+        CP2y = (0.864+ 0.864+ 0.864) / 3;
+        CP2z = (0.29+0.29+2.014) / 3;
+
+        //centro do tetraedro DE PLANO 3
+        CP3x = (1+2+1.5) / 3;
+        CP3y = (1.73+ 1.73+ 1.73) / 3;
+        CP3z = (0.578+0.578+1.442) / 3;
+
+        //centro do tetraedro DE PLANO DIAGONAL AMARELA 1
+        CP3x = () / 3;
+        CP3y = () / 3;
+        CP3z = () / 3;
+
+
+
+
+
+        //centro do tetraedro
+
+        //Cx = (Ax + Bx + Cx + Dx) / 4
+        //Cx = (0+2+1+1)/4;
+        //Cy = (Ay + By + Cy + Dy) / 4
+        //Cy = (0 + 0 + 0 + 1.73)/4;
+        //Cz = (Az + Bz + Cz + Dz) / 4
+        //Cz = (0 + 0 + 1.73 + 0.578) / 4;
     }
 
 
