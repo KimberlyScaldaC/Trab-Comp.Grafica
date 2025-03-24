@@ -7,11 +7,15 @@ public class manager : MonoBehaviour
 
     public GameObject tetrahedron; // prefab da camrera
     public GameObject[] vetGameObj = new GameObject[24];
-    GameObject pai;
+    //GameObject pai;
+    GameObject vetorRotPlano1;
+    GameObject vetorRotPlano2;
+    GameObject vetorRotPlano3;
     Vector3 m_Center;
     double CP1x, CP1y, CP1z;
     double CP2x, CP2y, CP2z;
     double CP3x, CP3y, CP3z;
+    double dx, dy, dz;
     // Use this for initialization
     void Start()
     {
@@ -73,47 +77,65 @@ public class manager : MonoBehaviour
 
 
 
+        // METADE DO TAMANHO DE UM TETRAEDRO = 0.432
 
-
-        pai = new GameObject();
+        // pai = new GameObject();
         //pai.transform.position = new Vector3(0,1,0); //pivo
-        pai.transform.position = new Vector3(0, 1, 0); //pivo
-        vetGameObj[3].transform.parent = pai.transform;
+        // pai.transform.position = new Vector3(0, 1, 0); //pivo
+        //vetGameObj[3].transform.parent = pai.transform;
         //vetGameObj[3].transform.bounds
 
-        //centro do tetraedro DE PLANO 1
-        CP1x = (0 + 3 + 1.5)/3;
-        CP1y = (0 + 0 + 0)/3;
-        CP1z = (0 + 0 + 2.595)/3;
+        //centro do tetraedro DE PLANO 1 ENCONTRA O CENTRO DA BASE
+        CP1x = (0 + 3 + 1.5) / 3;
+        CP1y = (0.432 + 0.432 + 0.432) / 3;
+        CP1z = (0 + 0 + 2.595) / 3;
 
         //centro do tetraedro DE PLANO 2
         CP2x = (0.5 + 2.5 + 1.5) / 3;
-        CP2y = (0.864+ 0.864+ 0.864) / 3;
-        CP2z = (0.29+0.29+2.014) / 3;
+        CP2y = (1.296 + 1.296 + 1.296) / 3;
+        CP2z = (0.29 + 0.29 + 2.014) / 3;
 
         //centro do tetraedro DE PLANO 3
-        CP3x = (1+2+1.5) / 3;
-        CP3y = (1.73+ 1.73+ 1.73) / 3;
-        CP3z = (0.578+0.578+1.442) / 3;
-
-        //centro do tetraedro DE PLANO DIAGONAL AMARELA 1
-        CP3x = () / 3;
-        CP3y = () / 3;
-        CP3z = () / 3;
+        CP3x = (1 + 2 + 1.5) / 3;
+        CP3y = (2.163 + 2.163 + 2.163) / 3;
+        CP3z = (0.578 + 0.578 + 1.442) / 3;
 
 
+        dx = 1.5;
+        dy = 2.595;
+        dz = 0.864;
+        //VETOR DA ROTACAO DO PLANO 1
+        vetorRotPlano1 = new GameObject();
+        GameObject vetorRotPlano1 = new GameObject(x, y, z);
+        vetorRotPlano1.transform.position = ( CP1x - dx; CP1y - dy; CP1z - dz);
+
+        vetorRotPlano2 = new GameObject();
+        GameObject vetorRotPlano2 = new GameObject(CP2x - dx, CP2y - dy, CP2z - dz);
+
+        vetorRotPlano3 = new GameObject();
+        GameObject vetorRotPlano3 = new GameObject(CP3x - dx, CP3y - dy, CP3z - dz);
+
+        
+        
+
+    //centro do tetraedro DE PLANO DIAGONAL AMARELA 1
+    //CP3x = () / 3;
+    //CP3y = () / 3;
+    //CP3z = () / 3;
 
 
 
-        //centro do tetraedro
 
-        //Cx = (Ax + Bx + Cx + Dx) / 4
-        //Cx = (0+2+1+1)/4;
-        //Cy = (Ay + By + Cy + Dy) / 4
-        //Cy = (0 + 0 + 0 + 1.73)/4;
-        //Cz = (Az + Bz + Cz + Dz) / 4
-        //Cz = (0 + 0 + 1.73 + 0.578) / 4;
-    }
+
+    //centro do tetraedro
+
+    //Cx = (Ax + Bx + Cx + Dx) / 4
+    //Cx = (0+2+1+1)/4;
+    //Cy = (Ay + By + Cy + Dy) / 4
+    //Cy = (0 + 0 + 0 + 1.73)/4;
+    //Cz = (Az + Bz + Cz + Dz) / 4
+    //Cz = (0 + 0 + 1.73 + 0.578) / 4;
+}
 
 
     // Update is called once per frame
