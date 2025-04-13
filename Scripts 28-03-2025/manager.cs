@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class manager : MonoBehaviour
 {
@@ -15,13 +16,8 @@ public class manager : MonoBehaviour
 
     public GameObject tetrahedron; // prefab da camrera
     public GameObject[] vetGameObj = new GameObject[22];
-    //GameObject pai;
-    //GameObject vetorRotPlano1;
-    //
-    GameObject basePivot, basePivot2, basePivot3, basePivot4;
-    //ameObject vetorRotPlano2;
-    //GameObject vetorRotPlano3;
-   //Vector3 m_Center;
+    GameObject basePivot, basePivot2, basePivot3, basePivot4, basePivot5;
+    Plane plano1, plano2, plano3;
     float CP1x, CP1y, CP1z, CP2x, CP2y, CP2z, CP3x, CP3y, CP3z;
    
    // double dx, dy, dz;
@@ -126,12 +122,31 @@ public class manager : MonoBehaviour
 
         basePivot3 = new GameObject("BasePivot3");
         basePivot3.transform.position = centroBase3;
-        basePivot3 = new GameObject("BasePivot3");
-        basePivot3.transform.position = p0;
+            
+        basePivot4 = new GameObject("BasePivot4");
+        Vector3 centroFaceL = new Vector3(1.25f, 0.866f, 1.15f); // ajuste fino se necessário
+        basePivot4.transform.position = centroFaceL;
 
+        basePivot4.transform.position = centroFaceL;
+        basePivot5 = new GameObject("BasePivot5");
+        Vector3 centroFaceR = new Vector3(1.75f, 0.866f, 0.57f); // ajuste conforme a face
+        basePivot5.transform.position = centroFaceR;
+
+       
         List<GameObject> tetrasNaBase = new List<GameObject>();
         List<GameObject> tetrasNaBase2 = new List<GameObject>();
         List<GameObject> tetrasNaBase3 = new List<GameObject>();
+        // Agrupar manualmente os tetraedros da Face L (exemplo: 9, 18, 21)
+        List<GameObject> tetrasFaceL = new List<GameObject>();
+        tetrasFaceL.Add(vetGameObj[9]);
+        tetrasFaceL.Add(vetGameObj[18]);
+        tetrasFaceL.Add(vetGameObj[21]);
+
+        foreach (GameObject tetra in tetrasFaceL)
+        {
+            tetra.transform.SetParent(basePivot4.transform);
+        }
+
         //List<GameObject> tetrasNaBase3 = new List<GameObject>();
 
         for (int i = 0; i < vetGameObj.Length; i++)
@@ -177,31 +192,9 @@ public class manager : MonoBehaviour
             // Muda cor para vermelho
             // tetra.GetComponent<Renderer>().material.color = Color.red;
         }
-        for (int i = 0; i < vetGameObj.Length; i++)
-        {
-            float y2 = vetGameObj[i].transform.position.y;
-
-            // Tolerância pequena para evitar problemas de precisão
-            if (y2 == 0)
-            {
-                tetrasNaBase2.Add(vetGameObj[i]);
-
-                //Debug.Log("Tetra na base (Y=0): " + vetGameObj[i].name);
-            }
-        }
-        for (int i = 0; i < tetrasNaBase3.Count; i++)
-        {
-            GameObject tetra = tetrasNaBase3[i];
-            tetra.transform.SetParent(basePivot4.transform);
-
-            // Muda cor para vermelho
-            }
 
 
-
-        // METADE DO TAMANHO DE UM TETRAEDRO = 0.432
-
-        vetGameObj[6].transform.SetParent(basePivot3.transform); //pivo
+       vetGameObj[6].transform.SetParent(basePivot3.transform); //pivo
         //vetGameObj[3].transform.parent = pai.transform;
         //vetGameObj[3].transform.bounds
 
@@ -210,38 +203,14 @@ public class manager : MonoBehaviour
         CP1y = (0.432 + 0.432 + 0.432) / 3;
         CP1z = (0 + 0 + 2.595) / 3;
 
-       
-
-        
-
-
         dx = 1.5;
         dy = 2.595;
         dz = 0.864;
-        /*VETOR DA ROTACAO DO PLANO 1
-        vetorRotPlano1 = new GameObject();
-        GameObject vetorRotPlano1 = new GameObject(x, y, z);
-        vetorRotPlano1.transform.position = (CP1x - dx; CP1y - dy; CP1z - dz);
-
-        vetorRotPlano2 = new GameObject();
-        GameObject vetorRotPlano2 = new GameObject(CP2x - dx, CP2y - dy, CP2z - dz);
-
-        vetorRotPlano3 = new GameObject();
-        GameObject vetorRotPlano3 = new GameObject(CP3x - dx, CP3y - dy, CP3z - dz);*/
-        /*
-
-
-
-
-        //centro do tetraedro DE PLANO DIAGONAL AMARELA 1
+    //centro do tetraedro DE PLANO DIAGONAL AMARELA 1
         //CP3x = () / 3;
         //CP3y = () / 3;
         //CP3z = () / 3;
         */
-
-
-
-
         //centro do tetraedro
 
         //Cx = (Ax + Bx + Cx + Dx) / 4
@@ -251,21 +220,10 @@ public class manager : MonoBehaviour
         //Cz = (Az + Bz + Cz + Dz) / 4
         //Cz = (0 + 0 + 1.73 + 0.578) / 4;
     }
-    /*void OnTriggerEnter(Collider other)
-    {
-        if (other.attachedRigidbody != null)
-        {
-            other.transform.SetParent(basePivot.transform);
-        }
-
-    }*/
-    
-
-
-    // Update is called once per frame
+   
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             basePivot.transform.Rotate(eixoHorizontal, 120f, Space.World);
             //basePivot.transform.Rotate(Vector3.up * 120);
@@ -273,28 +231,13 @@ public class manager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             //basePivot2.transform.Rotate(Vector3.up * 120);
-            basePivot2.transform.Rotate(eixoParalelo, 120f, Space.World);
+            basePivot2.transform.Rotate(eixoHorizontal, 120f, Space.World);
         }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            basePivot3.transform.Rotate(eixoVertical, 120f, Space.World);
-            
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            basePivot4.transform.Rotate(eixoParalelo2, 120f, Space.World);
+            basePivot3.transform.Rotate(eixoHorizontal, 120f, Space.World);
 
         }
-
-        //vetGameObj[3].transform.RotateAround(transform.position, Vector3.forward, 5f);
-        //cria um gameobject: Pai. Tem eixo de rotacao
-        //por o objeto como filho deste gameobject
-        //rotaciona o gameObjet(pai): consequencia o filho rotaciona
-        //Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent);
-        //pai.transform.Rotate(Vector3.right * 5);
-
-
-        //roda a piramide
-        //vetGameObj[4].transform.Rotate((Vector3.right + Vector3.up) * 5);
     }
 }
