@@ -36,51 +36,48 @@ public class manager : MonoBehaviour
             //i-1 posicao anterior
         }
 
-        //pegar tetra da posicao 3 e transladar
+        vetGameObj[0].transform.position = new Vector3(0f, 0f, 0f);
+        vetGameObj[1].transform.position = new Vector3(1f, 0f, 0f);
+        vetGameObj[2].transform.position = new Vector3(0.5f, 0f, 0.866f);
         vetGameObj[3].transform.position = new Vector3(0.5f, 0.86603f, 0.28868f);
-        //vetGameObj[3].transform.Rotate(110f,0f,0); // 90f
-        // vetGameObj[3].transform.RotateAround(transform.position, Vector3.forward, 5f);
-
-        //Posicionar as piramides
-        //vetGameObj[0].transform.position = new Vector3(0f, 0f, 0f); //Magenta BAIXO DIREITO
-        //vetGameObj[1].transform.position = new Vector3(1f, 0f, 0f); //Magenta BAIXO MEIO
-        vetGameObj[4].transform.position = new Vector3(2f, 0f, 0f); //Magenta BAIXO ESQUERDO
-        //vetGameObj[2].transform.position = new Vector3(0.5f, -0.13397f, 0.28868f); //Magenta MEIO ESQUERDO
-        vetGameObj[5].transform.position = new Vector3(1.5f, 0.87f, 0.29f); //Magenta MEIO DIREITO
-        vetGameObj[6].transform.position = new Vector3(1f, 1.7321f, 0.578f); //Magenta CIMA
-        vetGameObj[7].transform.position = new Vector3(1.5f, 0f, 0.86f); //Amarelo BAIXO MEIO
-        vetGameObj[8].transform.position = new Vector3(1f, 0f, 1.73f); //Amarelo BAIXO ESQUEDO
-        vetGameObj[9].transform.position = new Vector3(1f, 0.86603f, 1.15f); //Amarelo MEIO ESQUERDO
-        vetGameObj[10].transform.position = new Vector3(0.5f, 0f, 0.86f); //Vermelho BAIXO MEIO
-        vetGameObj[11].transform.position = new Vector3(2.5f, 0f, 0.87f); //Baixo
-        vetGameObj[12].transform.position = new Vector3(1.5f, 0f, 0.86f); //Baixo
-        vetGameObj[13].transform.position = new Vector3(2f, 0f, 1.73f); //Baixo
-        vetGameObj[14].transform.position = new Vector3(1.5f, 0.866f, 0.289f); //Magenta Inverso Direito
-        vetGameObj[15].transform.position = new Vector3(2.5f, 0.866f, 0.289f); //Magenta Inverso Esquerdo
-        vetGameObj[16].transform.position = new Vector3(2f, 1.732f, 0.578f); //Magenta Inverso Cima
-        vetGameObj[17].transform.position = new Vector3(1.656f, 0.338f, 0.374f); //Amarelo Inverso Direito
-        vetGameObj[18].transform.position = new Vector3(1.154f, 0.33f, 1.23f); //Amarelo Inverso Esquerdo
-        vetGameObj[19].transform.position = new Vector3(1.152f, 1.199f, 0.658f); //Amarelo Inverso Cima
-        vetGameObj[20].transform.position = new Vector3(1.507945f, 0.8542254f, 2.008367f); //Vermelho Inverso Direito
-        vetGameObj[21].transform.position = new Vector3(1.019f, 0.853f, 1.159f); //Vermelho Inverso Esquerdo
-        vetGameObj[22].transform.position = new Vector3(1.513f, 1.725f, 1.432f); //Vermelho Inverso Cima
-
-        //ROTAÇOES
-        vetGameObj[11].transform.rotation = Quaternion.Euler(0f, 180f, 0f); //Baixo
-        vetGameObj[12].transform.rotation = Quaternion.Euler(0f, 180f, 0f); //Baixo
-        vetGameObj[13].transform.rotation = Quaternion.Euler(0f, 180f, 0f); //Baixo
-        vetGameObj[14].transform.rotation = Quaternion.Euler(37f, 0f, 180f); //Magenta
-        vetGameObj[15].transform.rotation = Quaternion.Euler(37f, 0f, 180f); //Magenta
-        vetGameObj[16].transform.rotation = Quaternion.Euler(37f, 0f, 180f); //Magenta
-        vetGameObj[17].transform.rotation = Quaternion.Euler(-162.24f, -54.88599f, -33.29901f); //Amarelo
-        vetGameObj[18].transform.rotation = Quaternion.Euler(-162.24f, -54.88599f, -33.29901f); //Amarelo
-        vetGameObj[19].transform.rotation = Quaternion.Euler(-162.24f, -54.88599f, -33.29901f); //Amarelo
-        vetGameObj[20].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f); //Vermelho
-        vetGameObj[21].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f); //Vermelho
-        vetGameObj[22].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f); //Vermelho
+        vetGameObj[4].transform.position = new Vector3(2f, 0f, 0f);
+        vetGameObj[5].transform.position = new Vector3(1.5f, 0.87f, 0.29f);
+        vetGameObj[6].transform.position = new Vector3(1f, 1.7321f, 0.578f);
+        vetGameObj[7].transform.position = new Vector3(1.5f, 0f, 0.86f);
+        vetGameObj[8].transform.position = new Vector3(1f, 0f, 1.73f);
+        vetGameObj[9].transform.position = new Vector3(1f, 0.86603f, 1.15f);
+        vetGameObj[10].transform.position = new Vector3(0.5f, 0f, 0.86f);
+        vetGameObj[11].transform.position = new Vector3(2.5f, 0f, 0.87f);
+        vetGameObj[12].transform.position = new Vector3(1.5f, 0f, 0.86f);
+        vetGameObj[13].transform.position = new Vector3(2f, 0f, 1.73f);
+        vetGameObj[14].transform.position = new Vector3(1.5f, 0.866f, 0.289f);
+        vetGameObj[15].transform.position = new Vector3(2.5f, 0.866f, 0.289f);
+        vetGameObj[16].transform.position = new Vector3(2f, 1.732f, 0.578f);
+        vetGameObj[17].transform.position = new Vector3(1.656f, 0.338f, 0.374f);
+        vetGameObj[18].transform.position = new Vector3(1.154f, 0.33f, 1.23f);
+        vetGameObj[19].transform.position = new Vector3(1.152f, 1.199f, 0.658f);
+        vetGameObj[20].transform.position = new Vector3(1.507945f, 0.8542254f, 2.008367f);
+        vetGameObj[21].transform.position = new Vector3(1.019f, 0.853f, 1.159f);
+        vetGameObj[22].transform.position = new Vector3(1.513f, 1.725f, 1.432f);
 
 
-         CP1x = (0f + 3f + 1.5f) / 3f;
+        // ROTAÇOES (mantido)
+        vetGameObj[11].transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        vetGameObj[12].transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        vetGameObj[13].transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        vetGameObj[14].transform.rotation = Quaternion.Euler(37f, 0f, 180f);
+        vetGameObj[15].transform.rotation = Quaternion.Euler(37f, 0f, 180f);
+        vetGameObj[16].transform.rotation = Quaternion.Euler(37f, 0f, 180f);
+        vetGameObj[17].transform.rotation = Quaternion.Euler(-162.24f, -54.88599f, -33.29901f);
+        vetGameObj[18].transform.rotation = Quaternion.Euler(-162.24f, -54.88599f, -33.29901f);
+        vetGameObj[19].transform.rotation = Quaternion.Euler(-162.24f, -54.88599f, -33.29901f);
+        vetGameObj[20].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f);
+        vetGameObj[21].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f);
+        vetGameObj[22].transform.rotation = Quaternion.Euler(-162.086f, 55.098f, 34.017f);
+
+
+
+        CP1x = (0f + 3f + 1.5f) / 3f;
          CP1y = (0.432f + 0.432f + 0.432f) / 3f;
          CP1z = (0f + 0f + 2.595f) / 3f;
 
@@ -136,23 +133,11 @@ public class manager : MonoBehaviour
         List<GameObject> tetrasNaBase = new List<GameObject>();
         List<GameObject> tetrasNaBase2 = new List<GameObject>();
         List<GameObject> tetrasNaBase3 = new List<GameObject>();
-        // Agrupar manualmente os tetraedros da Face L (exemplo: 9, 18, 21)
-        List<GameObject> tetrasFaceL = new List<GameObject>();
-        tetrasFaceL.Add(vetGameObj[9]);
-        tetrasFaceL.Add(vetGameObj[18]);
-        tetrasFaceL.Add(vetGameObj[21]);
-
-        foreach (GameObject tetra in tetrasFaceL)
-        {
-            tetra.transform.SetParent(basePivot4.transform);
-        }
-
-        //List<GameObject> tetrasNaBase3 = new List<GameObject>();
 
         for (int i = 0; i < vetGameObj.Length; i++)
         {
         float y = vetGameObj[i].transform.position.y;
-        float z= vetGameObj[i].transform.position.z;
+       
 
             // Tolerância pequena para evitar problemas de precisão
            
@@ -193,7 +178,7 @@ public class manager : MonoBehaviour
             // tetra.GetComponent<Renderer>().material.color = Color.red;
         }
 
-
+       
        vetGameObj[6].transform.SetParent(basePivot3.transform); //pivo
         //vetGameObj[3].transform.parent = pai.transform;
         //vetGameObj[3].transform.bounds
@@ -237,7 +222,8 @@ public class manager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             basePivot3.transform.Rotate(eixoHorizontal, 120f, Space.World);
-
         }
+        
+
     }
 }
